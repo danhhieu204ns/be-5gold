@@ -42,7 +42,7 @@ class ListCustomerResponse(BaseModel):
 class CustomerPageableResponse(BaseModel):
     customers: list[CustomerResponse]
 
-    total_pages: int
+    total_page: int
     total_data: int
 
     class Config:

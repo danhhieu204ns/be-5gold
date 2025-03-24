@@ -57,7 +57,7 @@ async def get_customer_pageable(
         total_page = math.ceil(total / page_size)
         customers = db.query(Customer).limit(page_size).offset((page - 1) * page_size).all()
         return CustomerPageableResponse(
-            total=total,
+            total_data=total,
             total_page=total_page,
             customers=customers
         )
